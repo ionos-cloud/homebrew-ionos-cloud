@@ -5,23 +5,23 @@
 class Ionosctl < Formula
   desc "IonosCTL is a tool to help you manage your Ionos Cloud resources directly from your terminal."
   homepage "https://github.com/ionos-cloud/ionosctl"
-  version "6.6.8"
+  version "6.6.9"
   license "Apache-2.0"
 
   depends_on "go" => :optional
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ionos-cloud/ionosctl/releases/download/v6.6.8/ionosctl-6.6.8-darwin-amd64.tar.gz"
-      sha256 "c706cf8e6dfa72afa02e281fc06e07120305767306f21972aced91f3cdcf16be"
+      url "https://github.com/ionos-cloud/ionosctl/releases/download/v6.6.9/ionosctl-6.6.9-darwin-amd64.tar.gz"
+      sha256 "14db18c90dc377073d6504773dc7bfe079cb173038bf7fb54b891f3f8c589811"
 
       def install
         bin.install "ionosctl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ionos-cloud/ionosctl/releases/download/v6.6.8/ionosctl-6.6.8-darwin-arm64.tar.gz"
-      sha256 "b7964b1362e37e4d0d53a948d93a0a0063c6b73ad59773ba33d71f2615d47015"
+      url "https://github.com/ionos-cloud/ionosctl/releases/download/v6.6.9/ionosctl-6.6.9-darwin-arm64.tar.gz"
+      sha256 "57146ff63e7c995ce625da39e0214995b7662c9a123a3d9ce92dd68a76e632d5"
 
       def install
         bin.install "ionosctl"
@@ -30,17 +30,17 @@ class Ionosctl < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/ionos-cloud/ionosctl/releases/download/v6.6.8/ionosctl-6.6.8-linux-amd64.tar.gz"
-      sha256 "782af476e1e6cb400e7779d5b5c7f5d9a24f4185f7e7697d7fafa39dad815ed9"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/ionos-cloud/ionosctl/releases/download/v6.6.9/ionosctl-6.6.9-linux-arm64.tar.gz"
+      sha256 "b596bd6e00543ed9a9b6d5d4a300a28faaa526bfc5ae20ee13c8f702cd678bf5"
 
       def install
         bin.install "ionosctl"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ionos-cloud/ionosctl/releases/download/v6.6.8/ionosctl-6.6.8-linux-arm64.tar.gz"
-      sha256 "ad15f9f5f89c362e5860de438bad6b6025684bc4d2b7f5fe1faef7e1fb67bacc"
+    if Hardware::CPU.intel?
+      url "https://github.com/ionos-cloud/ionosctl/releases/download/v6.6.9/ionosctl-6.6.9-linux-amd64.tar.gz"
+      sha256 "b546167d137a5b5693eb05ed9b4200fec0a392974e16197d51c76c974118aecb"
 
       def install
         bin.install "ionosctl"
