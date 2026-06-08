@@ -11,7 +11,7 @@ class IonoscloudMcp < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/ionos-cloud/ionoscloud-mcp/releases/download/v0.1.2/ionoscloud-mcp-0.1.2-darwin-amd64.tar.gz"
-      sha256 "b2e9948550836f3a2aab4ef7adc19abd98c22de572bf6f7299c1656e872add05"
+      sha256 "64c3fafefee23a194caa46a1b1718b19b6d413923c869291638696711c1286f0"
 
       define_method(:install) do
         bin.install "ionoscloud-mcp"
@@ -19,7 +19,7 @@ class IonoscloudMcp < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/ionos-cloud/ionoscloud-mcp/releases/download/v0.1.2/ionoscloud-mcp-0.1.2-darwin-arm64.tar.gz"
-      sha256 "7705a3198e8f3ca8e33f7dc9a32f99dd90f4461698bd44635cec5742429db117"
+      sha256 "920460235b1e990ab2e097bb0c8a7afac0d3506e185bfef9252d233f57336de2"
 
       define_method(:install) do
         bin.install "ionoscloud-mcp"
@@ -30,14 +30,14 @@ class IonoscloudMcp < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/ionos-cloud/ionoscloud-mcp/releases/download/v0.1.2/ionoscloud-mcp-0.1.2-linux-amd64.tar.gz"
-      sha256 "8103dd4376f766aafdb570eefcab9a5e9e318827dd1a6ff5f5b873e4664d956d"
+      sha256 "1d1b69f1d0b9dbe354f2c331f9d963e9c7b6e032b71a4fcbb2c779fa276944e9"
       define_method(:install) do
         bin.install "ionoscloud-mcp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/ionos-cloud/ionoscloud-mcp/releases/download/v0.1.2/ionoscloud-mcp-0.1.2-linux-arm64.tar.gz"
-      sha256 "11c7489bd1a8fbc9edf29c3407d7f8784dd341a1a07f2730c7a4b1626473b1e9"
+      sha256 "bafd936c38282ddcd507d43cfb4187807701b8f59010bd3d066b740d88a8ac46"
       define_method(:install) do
         bin.install "ionoscloud-mcp"
       end
