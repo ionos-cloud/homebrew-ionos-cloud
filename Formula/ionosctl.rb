@@ -5,23 +5,23 @@
 class Ionosctl < Formula
   desc "IonosCTL is a tool to help you manage your IONOS CLOUD resources directly from your terminal."
   homepage "https://github.com/ionos-cloud/ionosctl"
-  version "6.10.1"
+  version "6.10.2"
   license "Apache-2.0"
 
   depends_on "go" => :optional
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ionos-cloud/ionosctl/releases/download/v6.10.1/ionosctl-6.10.1-darwin-amd64.tar.gz"
-      sha256 "be3eb0a4c2d5eacee34a082a234749ba9a26ed165581a6844f07dde72150a4b6"
+      url "https://github.com/ionos-cloud/ionosctl/releases/download/v6.10.2/ionosctl-6.10.2-darwin-amd64.tar.gz"
+      sha256 "df9b8451cfcb3be602a8865aa2ea241ab6818f555fe850f52495e5881e36c95b"
 
       define_method(:install) do
         bin.install "ionosctl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ionos-cloud/ionosctl/releases/download/v6.10.1/ionosctl-6.10.1-darwin-arm64.tar.gz"
-      sha256 "442865967d21d9b1c88c1d08391c2961aa8b35076a30f55f4bbb815604cef997"
+      url "https://github.com/ionos-cloud/ionosctl/releases/download/v6.10.2/ionosctl-6.10.2-darwin-arm64.tar.gz"
+      sha256 "f06e960a1163cda8c4ea9f32aa4b8ba01e7d7a26fef1c272f9b2e9de8c0a21b5"
 
       define_method(:install) do
         bin.install "ionosctl"
@@ -31,15 +31,15 @@ class Ionosctl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ionos-cloud/ionosctl/releases/download/v6.10.1/ionosctl-6.10.1-linux-amd64.tar.gz"
-      sha256 "649ce5142ebfdf35510bb8b15a132dc4e3f96f13a2ecb76acc6e4ff17f331343"
+      url "https://github.com/ionos-cloud/ionosctl/releases/download/v6.10.2/ionosctl-6.10.2-linux-amd64.tar.gz"
+      sha256 "9eff75da422c6c73cb36ff6089dcb172c8037660574a67c2d8d5ca8352d3664d"
       define_method(:install) do
         bin.install "ionosctl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ionos-cloud/ionosctl/releases/download/v6.10.1/ionosctl-6.10.1-linux-arm64.tar.gz"
-      sha256 "57c99c429228fcf22ca2203dbc0d3b4454898faa824af0d5fc4c82ed9a817883"
+      url "https://github.com/ionos-cloud/ionosctl/releases/download/v6.10.2/ionosctl-6.10.2-linux-arm64.tar.gz"
+      sha256 "3e2f5adc68a3e139e9fc985efa3c48cffcbf649f3887f413e9ee9af38b46bf83"
       define_method(:install) do
         bin.install "ionosctl"
       end
