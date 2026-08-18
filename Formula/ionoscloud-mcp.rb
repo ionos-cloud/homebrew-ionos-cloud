@@ -5,21 +5,21 @@
 class IonoscloudMcp < Formula
   desc "MCP server bridging LLM clients to IONOS Cloud APIs."
   homepage "https://github.com/ionos-cloud/ionoscloud-mcp"
-  version "1.0.1"
+  version "1.1.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ionos-cloud/ionoscloud-mcp/releases/download/v1.0.1/ionoscloud-mcp-1.0.1-darwin-amd64.tar.gz"
-      sha256 "a4ba06b46de32ee920386d365fc311df946ea1c64ba09d618f9b46f682f05c62"
+      url "https://github.com/ionos-cloud/ionoscloud-mcp/releases/download/v1.1.0/ionoscloud-mcp-1.1.0-darwin-amd64.tar.gz"
+      sha256 "97ab51bfca398bb81e689c6c9ca5e0afdfa7827a48e1bd2535ad88e028f2f5d4"
 
       define_method(:install) do
         bin.install "ionoscloud-mcp"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ionos-cloud/ionoscloud-mcp/releases/download/v1.0.1/ionoscloud-mcp-1.0.1-darwin-arm64.tar.gz"
-      sha256 "fff9b5eca98f9a77364b57a3309da6c15704a8429104bd717331b34c48d99550"
+      url "https://github.com/ionos-cloud/ionoscloud-mcp/releases/download/v1.1.0/ionoscloud-mcp-1.1.0-darwin-arm64.tar.gz"
+      sha256 "e6d038ed385eced4f70136c33940b10fd2d6d507f30c31d5b0128641ba076c40"
 
       define_method(:install) do
         bin.install "ionoscloud-mcp"
@@ -29,15 +29,15 @@ class IonoscloudMcp < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ionos-cloud/ionoscloud-mcp/releases/download/v1.0.1/ionoscloud-mcp-1.0.1-linux-amd64.tar.gz"
-      sha256 "28edabf3046e2d51602252d4f97b910281a9bdc5e01f4449a1948d4e9af35feb"
+      url "https://github.com/ionos-cloud/ionoscloud-mcp/releases/download/v1.1.0/ionoscloud-mcp-1.1.0-linux-amd64.tar.gz"
+      sha256 "f77d3d6d80373b1bf641c20937116da22fbf3c07d16d1fe2e495d5d3a2670bfd"
       define_method(:install) do
         bin.install "ionoscloud-mcp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ionos-cloud/ionoscloud-mcp/releases/download/v1.0.1/ionoscloud-mcp-1.0.1-linux-arm64.tar.gz"
-      sha256 "9c6d6567d472aca20729bed065ae84cab3c2f0609c7ceb3d3d92f5eb1e4d85f3"
+      url "https://github.com/ionos-cloud/ionoscloud-mcp/releases/download/v1.1.0/ionoscloud-mcp-1.1.0-linux-arm64.tar.gz"
+      sha256 "f46ec1da24c1a7b1f93a417922a305d1591e0d7429d584cc782344ccc19b123f"
       define_method(:install) do
         bin.install "ionoscloud-mcp"
       end
